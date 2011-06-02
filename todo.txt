@@ -1,0 +1,28 @@
+- main module
+    + initialize database
+    - initialize config?
+- web module
+    - admin urls
+        + credentials
+        + create experiment
+        - delete experiment
+        - get experiment stats
+        - start/stop experiment
+    - test urls
+        + test page
+        + goal page
+- experiment module
+    + get experiment 
+    + create (and initialize) experiment
+    - get experiment stats
+    + pick a combination for test page
+    + encode/decode to/from json
+	- we need to find a compact way to store the experiment stats.
+	- we need to find a way to dump all data to a persistent data store, periodically
+	- we need to find a way to get rid of the access logs in mnesia memory table
+- taguchi module
+    - pick a taguchi array for given scheme
+- logger module
+    + log test page visit
+    + log goal page conversion
+    - dump logs to amazon s3 (amazon s3 can be down!)

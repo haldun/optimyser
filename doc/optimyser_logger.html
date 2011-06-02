@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Module optimyser_logger</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" title="EDoc">
+</head>
+<body bgcolor="white">
+<div class="navbar"><a name="#navbar_top"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<hr>
+
+<h1>Module optimyser_logger</h1>
+<ul class="index"><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>
+
+<p><b>Behaviours:</b> <a href="gen_server.html"><tt>gen_server</tt></a>.</p>
+
+<h2><a name="index">Function Index</a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#code_change-3">code_change/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#export_to_mysql-1">export_to_mysql/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#handle_call-3">handle_call/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#handle_cast-2">handle_cast/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#handle_info-2">handle_info/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#init-1">init/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#log_goal_page-4">log_goal_page/4</a></td><td>Log goal page visit to database.</td></tr>
+<tr><td valign="top"><a href="#log_test_page-4">log_test_page/4</a></td><td>Log landing page visit to database.</td></tr>
+<tr><td valign="top"><a href="#monitor_logs-0">monitor_logs/0</a></td><td></td></tr>
+<tr><td valign="top"><a href="#start_link-0">start_link/0</a></td><td></td></tr>
+<tr><td valign="top"><a href="#terminate-2">terminate/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#update_combination_visit-2">update_combination_visit/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#update_conversion-2">update_conversion/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#update_impression-1">update_impression/1</a></td><td>Increments the total impression count for the experiment.</td></tr>
+</table>
+
+<h2><a name="functions">Function Details</a></h2>
+
+<h3 class="function"><a name="code_change-3">code_change/3</a></h3>
+<div class="spec">
+<p><tt>code_change(OldVsn, State, Extra) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="export_to_mysql-1">export_to_mysql/1</a></h3>
+<div class="spec">
+<p><tt>export_to_mysql(Log) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="handle_call-3">handle_call/3</a></h3>
+<div class="spec">
+<p><tt>handle_call(X1, From, State) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="handle_cast-2">handle_cast/2</a></h3>
+<div class="spec">
+<p><tt>handle_cast(Msg, State) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="handle_info-2">handle_info/2</a></h3>
+<div class="spec">
+<p><tt>handle_info(Info, State) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="init-1">init/1</a></h3>
+<div class="spec">
+<p><tt>init(X1) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="log_goal_page-4">log_goal_page/4</a></h3>
+<div class="spec">
+<p><tt>log_goal_page(Exp::<a href="#type-experiment">experiment()</a>, Combination::combination, VisitorId::string(), VisitorIp::string()) -&gt; ok</tt></p>
+</div><p>Log goal page visit to database.</p>
+
+<h3 class="function"><a name="log_test_page-4">log_test_page/4</a></h3>
+<div class="spec">
+<p><tt>log_test_page(Exp::<a href="#type-experiment">experiment()</a>, Combination::combination, VisitorId::string(), VisitorIp::string()) -&gt; ok</tt></p>
+</div><p>Log landing page visit to database.</p>
+
+<h3 class="function"><a name="monitor_logs-0">monitor_logs/0</a></h3>
+<div class="spec">
+<p><tt>monitor_logs() -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="start_link-0">start_link/0</a></h3>
+<div class="spec">
+<p><tt>start_link() -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="terminate-2">terminate/2</a></h3>
+<div class="spec">
+<p><tt>terminate(Reason, State) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="update_combination_visit-2">update_combination_visit/2</a></h3>
+<div class="spec">
+<p><tt>update_combination_visit(Exp, Combination) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="update_conversion-2">update_conversion/2</a></h3>
+<div class="spec">
+<p><tt>update_conversion(Exp, Combination) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="update_impression-1">update_impression/1</a></h3>
+<div class="spec">
+<p><tt>update_impression(Exp::<a href="#type-experiment">experiment()</a>) -&gt; ok</tt></p>
+</div><p>Increments the total impression count for the experiment</p>
+<hr>
+
+<div class="navbar"><a name="#navbar_bottom"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<p><i>Generated by EDoc, Feb 9 2009, 22:45:08.</i></p>
+</body>
+</html>
